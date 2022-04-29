@@ -9,7 +9,7 @@ This repo is home to vagrant config files relevant to UnumID.
 brew install vagrant
 ```
 
-Ensure is probably install on your path by typing `vagrant` in the cli and should get command help.
+Ensure is properly installed on your path by typing `vagrant` in the cli and should get command help.
 
 
 2) Install VirtualBox. This [guide](https://cs.hofstra.edu/docs/pages/guides/vbox_mac.html) is fairly concise. Be sure to do the system security step. Otherwise will get [errors](https://www.howtogeek.com/658047/how-to-fix-virtualboxs-%E2%80%9Ckernel-driver-not-installed-rc-1908-error/).
@@ -43,4 +43,4 @@ More info on Vagrant commands can be obtained by simply entering `vagrant` into 
 ## Troubleshooting
 If getting an error first ensure you have enabled your security settings so code execution from Oracle is allowed [[1]](https://www.howtogeek.com/658047/how-to-fix-virtualboxs-%E2%80%9Ckernel-driver-not-installed-rc-1908-error/).
 
-If still getting an error while unpacking an box then it is very likely an Disk Space usage. Please ensure you have at least 20GBs free per VM. Windows requires 14GB minimum just to start.
+If still getting an error while unpacking a box then it is very likely an Disk Space usage. Please ensure you have at least 20GBs free per VM. Windows requires 14GB minimum just to start.
