@@ -1,5 +1,5 @@
 # Vagrant
-This repo house vagrant config files relevant to UnumID. 
+This repo is home to vagrant config files relevant to UnumID. 
 
 ## First Time Use
 
