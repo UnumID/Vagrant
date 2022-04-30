@@ -9,6 +9,12 @@ This repo is home to vagrant config files relevant to UnumID.
 brew install vagrant
 ```
 
+If you don't have brew, install it as described [here](https://brew.sh) using:
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 Ensure is properly installed on your path by typing `vagrant` in the cli and should get command help.
 
 
@@ -18,9 +24,13 @@ Ensure is properly installed on your path by typing `vagrant` in the cli and sho
 ## How to Use
 After having Vagrant and VirtualBox installed 
 
-1) Go to the directory of the box you would like to use.
+1) Open VirtualBox, click the New button in toolbar, and create a new OS. For example:
 
-2) Run `vagrant up`.
+![Screen Shot 2022-04-30 at 1 34 57 PM](https://user-images.githubusercontent.com/37675947/166116270-4bafc457-2846-43e1-9908-1eb8c8639ad5.png)
+
+2) Go to the directory of the box you would like to use.
+
+3) Run `vagrant up`.
 
 First time the command will take some time as it needs to download the "box" with the os image. However after the first time this will be much quicker.
 
