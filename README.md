@@ -18,7 +18,7 @@ Ensure is properly installed on your path by typing `vagrant` in the cli and sho
 ## How to Use
 After having Vagrant and VirtualBox installed 
 
-1) Go to the director of the box you would like to use.
+1) Go to the directory of the box you would like to use.
 
 2) Run `vagrant up`.
 
