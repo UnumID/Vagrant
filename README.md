@@ -52,6 +52,46 @@ password: `vagrant`
 
 More info on Vagrant commands can be obtained by simply entering `vagrant` into the CLI.
 
+## Sharing Files from Host to VM
+Vagrant by default sets up the directory you ran `vagrant up` in as a shared volume on the guest OS. So any files you put in the `windows11`, for example, are automatically shared with the VM on the vm's user's path. The exist path is actually part of the `up` output. You can find it by looking for `Mounting shared folders...`
+
+### Vagrant scp plugin
+Alternatively one can use the vagrant scp plugin. It can be installed by 
+```
+vagrant plugin install vagrant-scp
+```
+Once installed one can scp files. This [guide](https://medium.com/@smartsplash/using-scp-and-vagrant-scp-in-virtualbox-to-copy-from-guest-vm-to-host-os-and-vice-versa-9d2c828b6197#:~:text=Method%20%23%202%3A-,sending%20file%20from%20Host%20OS%20to%20Guest%20VM%20using%20scp,-This%20is%20easy) maybe helpful in addition to the vagrant-scp [docs](https://github.com/invernizzi/vagrant-scp).
+
+If you have just a single Vagrant guest, you can copy files over like this:
+
+    vagrant scp <some_local_file_or_dir> <somewhere_on_the_vm>
+
+If you have multiple VMs, you can specify it.
+
+    vagrant scp <some_local_file_or_dir> [vm_name]:<somewhere_on_the_vm>
+
+Copying files out of the guest works in the same fashion
+
+    vagrant scp [vm_name]:<somewhere_on_the_vm> <some_local_file_or_dir>
+
+If source is a directory it will be copied recursively.
+
+
+#### Examples
+
+If you have just one guest, you can copy files to it like this:
+
+    vagrant scp file_on_host.txt :file_on_vm.txt
+
+And from the guest like this:
+
+    vagrant scp :file_on_vm.txt file_on_host.txt
+
+Concretely something like:
+```
+vagrant scp testFile default:/Users/vagrant/testFile
+```
+
 ## Troubleshooting
 If getting an error first ensure you have enabled your security settings so code execution from Oracle is allowed [[1]](https://www.howtogeek.com/658047/how-to-fix-virtualboxs-%E2%80%9Ckernel-driver-not-installed-rc-1908-error/).
 
