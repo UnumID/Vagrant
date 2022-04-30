@@ -24,11 +24,13 @@ Ensure is properly installed on your path by typing `vagrant` in the cli and sho
 ## How to Use
 After having Vagrant and VirtualBox installed 
 
-1) Open VirtualBox, click the New button in toolbar, and create a new OS. For example:
+1) Clone this repo.
 
-![Screen Shot 2022-04-30 at 1 34 57 PM](https://user-images.githubusercontent.com/37675947/166116270-4bafc457-2846-43e1-9908-1eb8c8639ad5.png)
+2) Go to the directory of the box you would like to use. For example:
 
-2) Go to the directory of the box you would like to use.
+```
+cd windows11
+```
 
 3) Run `vagrant up`.
 
