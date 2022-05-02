@@ -1,7 +1,7 @@
 # Vagrant
 This repo is home to vagrant config files relevant to UnumID. 
 
-## First Time Use
+## Prerequisites
 
 1) Install [Vagrant](https://www.vagrantup.com/downloads). I would recommend installing with brew if possible.
 
@@ -63,16 +63,19 @@ vagrant plugin install vagrant-scp
 Once installed one can scp files. This [guide](https://medium.com/@smartsplash/using-scp-and-vagrant-scp-in-virtualbox-to-copy-from-guest-vm-to-host-os-and-vice-versa-9d2c828b6197#:~:text=Method%20%23%202%3A-,sending%20file%20from%20Host%20OS%20to%20Guest%20VM%20using%20scp,-This%20is%20easy) maybe helpful in addition to the vagrant-scp [docs](https://github.com/invernizzi/vagrant-scp).
 
 If you have just a single Vagrant guest, you can copy files over like this:
-
-    vagrant scp <some_local_file_or_dir> <somewhere_on_the_vm>
+```
+vagrant scp <some_local_file_or_dir> <somewhere_on_the_vm>
+```
 
 If you have multiple VMs, you can specify it.
-
-    vagrant scp <some_local_file_or_dir> [vm_name]:<somewhere_on_the_vm>
+```
+vagrant scp <some_local_file_or_dir> [vm_name]:<somewhere_on_the_vm>
+```
 
 Copying files out of the guest works in the same fashion
-
-    vagrant scp [vm_name]:<somewhere_on_the_vm> <some_local_file_or_dir>
+```
+vagrant scp [vm_name]:<somewhere_on_the_vm> <some_local_file_or_dir>
+```
 
 If source is a directory it will be copied recursively.
 
@@ -80,14 +83,16 @@ If source is a directory it will be copied recursively.
 #### Examples
 
 If you have just one guest, you can copy files to it like this:
-
-    vagrant scp file_on_host.txt :file_on_vm.txt
+```
+vagrant scp file_on_host.txt :file_on_vm.txt
+```
 
 And from the guest like this:
+```
+vagrant scp :file_on_vm.txt file_on_host.txt
+```
 
-    vagrant scp :file_on_vm.txt file_on_host.txt
-
-Concretely something like:
+Concretely, something like the follow which also specifies the default vm name, `default`:
 ```
 vagrant scp testFile default:/Users/vagrant/testFile
 ```
