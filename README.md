@@ -53,7 +53,7 @@ password: `vagrant`
 More info on Vagrant commands can be obtained by simply entering `vagrant` into the CLI.
 
 ## Sharing Files from Host to VM
-Vagrant by default sets up the directory you ran `vagrant up` in as a shared volume on the guest OS. So any files you put in the `windows11`, for example, are automatically shared with the VM on the vm's user's path. The exist path is actually part of the `up` output. You can find it by looking for `Mounting shared folders...`
+Vagrant by default sets up the directory you ran `vagrant up` in as a shared volume on the guest OS. So any files you put in the `windows11`, for example, are automatically shared with the VM on the vm's user's path. The exact path is actually part of the `up` output. You can find it by looking for `Mounting shared folders...`
 
 ### Vagrant scp plugin
 Alternatively one can use the vagrant scp plugin. It can be installed by 
